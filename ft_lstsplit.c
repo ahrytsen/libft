@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/05 15:33:33 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/11/05 20:29:33 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/11/10 12:51:58 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ t_list		*ft_lstsplit(char const *s, char c)
 
 	wlen = 0;
 	split_lst = NULL;
+	if (!s)
+		return (NULL);
 	while (*s)
 	{
 		if (*s != c)
