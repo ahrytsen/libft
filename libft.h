@@ -6,13 +6,12 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 05:35:20 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/11/05 21:20:46 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/11/12 16:50:11 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define MAX_LONG 9223372036854775807
 
 # include <stdlib.h>
 # include <unistd.h>
