@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 19:39:59 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/11/04 19:53:37 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/11/27 18:34:27 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@ void	ft_lstadd_end(t_list **alst, t_list *new)
 {
 	if (!alst)
 		return ;
-	while (*alst)
+	if (!*alst)
+	{
+		*alst = new;
+		return ;
+	}
+	while (*alst->next)
 		alst = &(*alst)->next;
-	*alst = new;
+	*alst->next = new;
 }
