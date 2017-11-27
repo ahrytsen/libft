@@ -6,7 +6,7 @@
 #    By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/03 20:19:57 by ahrytsen          #+#    #+#              #
-#    Updated: 2017/11/16 12:30:58 by ahrytsen         ###   ########.fr        #
+#    Updated: 2017/11/27 18:50:28 by ahrytsen         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -34,7 +34,7 @@ $(NAME): $(OBJ) $(HDR)
 	@ranlib $(NAME);
 
 .c.o:
-	@gcc -Wall -Wextra -Werror -c $< 
+	@gcc -Wall -Wextra -Werror -c $<
 
 clean:
 	@rm -f $(OBJ)
