@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 05:35:20 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/11/16 12:32:40 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/11/29 13:56:56 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+
+# define BUFF_SIZE 32
 
 /*
 **				Part 1 - Libc functions
@@ -102,5 +106,28 @@ t_list			*ft_lstpush_front(t_list **lst, void const *content,
 								size_t content_size);
 t_list			*ft_lstsplit(char const *s, char c);
 size_t			ft_strlen_c(char const *s, char c);
+/*
+**              Get_Next_Line
+*/
+int				get_next_line(const int fd, char **line);
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
