@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_isnumeric_str.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/01 18:53:47 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/19 14:29:39 by ahrytsen         ###   ########.fr       */
+/*   Created: 2018/03/05 21:24:57 by ahrytsen          #+#    #+#             */
+/*   Updated: 2018/03/05 21:25:38 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+int	ft_isnumeric_str(char *str)
 {
-	return (ft_ltoa(n));
+	if (!str)
+		return (0);
+	while (*str)
+		if (!ft_isdigit(*str))
+			return (0);
+	return (1);
 }

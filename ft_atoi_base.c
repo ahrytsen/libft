@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/01 18:53:47 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/19 14:29:39 by ahrytsen         ###   ########.fr       */
+/*   Created: 2018/03/12 13:34:18 by ahrytsen          #+#    #+#             */
+/*   Updated: 2018/03/12 13:35:19 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+int	ft_atoi_base(const char *str, int base)
 {
-	return (ft_ltoa(n));
+	return (ft_atol_base(str, base));
 }

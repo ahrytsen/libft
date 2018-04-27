@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strarr_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/01 18:53:47 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/19 14:29:39 by ahrytsen         ###   ########.fr       */
+/*   Created: 2018/03/16 18:56:49 by ahrytsen          #+#    #+#             */
+/*   Updated: 2018/03/16 18:58:43 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+void	ft_strarr_free(char **arr)
 {
-	return (ft_ltoa(n));
+	size_t	i;
+
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
 }

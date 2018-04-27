@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 05:35:20 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/11/29 13:56:56 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2018/04/27 12:09:34 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,23 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
+# define MOD(a)(a >= 0 ? a : -a)
+
+/*
+**				ft_printf
+*/
+int				ft_printf(const char *format, ...);
+int				ft_dprintf(int fd, const char *format, ...);
+void			ft_fatal(int st, void (*exit_f)(int), const char *format, ...);
+/*
+**int				ft_asprintf(char *str, const char *format, ...);
+*/
+/*
+**				Get_Next_Line
+*/
 # define BUFF_SIZE 32
 
+int				get_next_line(const int fd, char **line);
 /*
 **				Part 1 - Libc functions
 */
@@ -72,7 +87,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_itoa(int n);
-void			ft_putchar(char c);
+int				ft_putchar(int c);
 void			ft_putstr(char const *s);
 void			ft_putendl(char const *s);
 void			ft_putnbr(int n);
@@ -106,28 +121,26 @@ t_list			*ft_lstpush_front(t_list **lst, void const *content,
 								size_t content_size);
 t_list			*ft_lstsplit(char const *s, char c);
 size_t			ft_strlen_c(char const *s, char c);
-/*
-**              Get_Next_Line
-*/
-int				get_next_line(const int fd, char **line);
+int				ft_wcharlen(int c);
+size_t			ft_strulen(int *s);
+char			*ft_strextend(char *s1, char *s2);
+char			*ft_ultoa_base(size_t value, int base, char st_l);
+long			ft_atol(const char *str);
+char			*ft_ltoa(long value);
+char			*ft_dtoa(double nbr, int precision, int dot);
+char			*ft_ldtoa(long double nbr, int precision, int dot);
+char			*ft_dtoea(double nbr, int precision, int dot, char c);
+char			*ft_ldtoea(long double nbr, int precision, int dot, char c);
+void			ft_sort_params(char **av, int ac);
+char			**ft_strdup_arr(char **src_arr);
+int				ft_iswhitespace(int c);
+int				ft_isalpha_str(char *str);
+int				ft_isnumeric_str(char *str);
+int				ft_isalnum_str(char *str);
+int				ft_isascii_str(char *str);
+int				ft_isprint_str(char *str);
+long			ft_atol_base(const char *str, int base);
+int				ft_atoi_base(const char *str, int base);
+void			ft_strarr_free(char **arr);
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

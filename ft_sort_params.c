@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/01 18:53:47 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/19 14:29:39 by ahrytsen         ###   ########.fr       */
+/*   Created: 2018/01/04 14:58:18 by ahrytsen          #+#    #+#             */
+/*   Updated: 2018/01/06 16:28:00 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+void	ft_sort_params(char **av, int ac)
 {
-	return (ft_ltoa(n));
+	int		i;
+	int		j;
+	char	*tmp;
+
+	i = 1;
+	while (i < ac)
+	{
+		j = 0;
+		while (j < ac - i)
+		{
+			if (ft_strcmp(av[j], av[j + 1]) > 0)
+			{
+				tmp = av[j];
+				av[j] = av[j + 1];
+				av[j + 1] = tmp;
+			}
+			j++;
+		}
+		i++;
+	}
 }

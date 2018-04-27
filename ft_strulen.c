@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strulen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/01 18:53:47 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/19 14:29:39 by ahrytsen         ###   ########.fr       */
+/*   Created: 2017/12/16 15:41:10 by ahrytsen          #+#    #+#             */
+/*   Updated: 2017/12/25 16:59:36 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+size_t	ft_strulen(int *s)
 {
-	return (ft_ltoa(n));
+	size_t	len;
+
+	len = 0;
+	while (*s)
+		len += ft_wcharlen(*s++);
+	return (len);
 }
